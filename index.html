@@ -8,22 +8,83 @@
     <div class="chore">
       <p id="potty-chore">
         No Accidents All Day <span class="count" id="potty-count">0</span
-        ><button class="add" id="add-potty" onClick="increment('potty-count')">+</button
-        ><button class="reset" id="reset-potty">Reset</button>
+        ><button
+          class="add"
+          id="add-potty"
+          onClick="increment('potty-count'); updateTotal()"
+        >
+          +</button
+        ><button
+          class="reset"
+          id="reset-potty"
+          onClick="reset('potty-count'); updateTotal()"
+        >
+          Reset
+        </button>
       </p>
     </div>
     <div class="chore">
       <p id="lunch-chore">
         Finish Lunch at Daycare <span class="count" id="lunch-count">0</span
-        ><button class="add lunch" id="add-lunch" onClick="increment('lunch-count')">+</button
-        ><button class="reset" id="reset-lunch">Reset</button>
+        ><button
+          class="add lunch"
+          id="add-lunch"
+          onClick="increment('lunch-count'); updateTotal()"
+        >
+          +</button
+        ><button
+          class="reset"
+          id="reset-lunch"
+          onClick="reset('lunch-count'); updateTotal()"
+        >
+          Reset
+        </button>
       </p>
     </div>
     <div class="chore">
       <p id="bed-chore">
         Stay in Bed All Night <span class="count" id="bed-count">0</span
-        ><button class="add" id="add-bed" onClick="increment('bed-count')">+</button
-        ><button class="reset" id="reset-bed">Reset</button>
+        ><button
+          class="add"
+          id="add-bed"
+          onClick="increment('bed-count'); updateTotal()"
+        >
+          +</button
+        ><button
+          class="reset"
+          id="reset-bed"
+          onClick="reset('bed-count'); updateTotal()"
+        >
+          Reset
+        </button>
+      </p>
+    </div>
+    <div class="chore">
+      <p id="potty-chore">
+        Feed Puppy and Kitty<span class="count" id="feed-count">0</span
+        ><button
+          class="add"
+          id="add-potty"
+          onClick="increment('feed-count'); updateTotal()"
+        >
+          +</button
+        ><button class="reset" onClick="reset('feed-count'); updateTotal()">
+          Reset
+        </button>
+      </p>
+    </div>
+    <div class="chore">
+      <p id="potty-chore">
+        Read for 20 Minutes <span class="count" id="read-count">0</span
+        ><button
+          class="add"
+          id="add-read"
+          onClick="increment('read-count'); updateTotal()"
+        >
+          +</button
+        ><button class="reset" onClick="reset('read-count'); updateTotal()">
+          Reset
+        </button>
       </p>
     </div>
     <div id="totals">
