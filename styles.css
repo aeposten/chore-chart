@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
 
 /*
+Color Scheme - Some colors aren't used at this point, but I plan to update styling at a later date
 Light Grey: #EBEBF2
 Blue: #4162A6
 Green: #66D9AF
@@ -9,7 +10,7 @@ Peach: #F2C0A2
 */
 
 
-
+/* styling for the body elements */
 body {
     background-color: #EBEBF2;
     color: #4162A6;
@@ -17,10 +18,28 @@ body {
     font-size: 20px;
 }
 
+/* Utility Classes to format the rows and columns as desired  */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.flex-row {
+    display: flex;
+    justify-content: space-evenly;
+    border: 6px solid #4162A6;
+    border-radius: 12px;
+}
 
 #chore-heading {
+    margin: 0;
     font-family: 'Pacifico', cursive;
+}
+
+#img-container {
+    display: flex;
+    justify-content: center;
 }
 
 #helmi-pic {
@@ -42,4 +61,20 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 15px;
+}
+
+#chore-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#prizes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    width: 100%;
 }

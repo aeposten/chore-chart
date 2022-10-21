@@ -48,7 +48,7 @@ function updateTotal() {
   totalCounter.textContent = total;
 
   if (total >= 15) {
-    getPrize.textContent = "See Mama for a Prize."
+    getPrize.textContent = "See Mama for a Prize"
   }
 }
 
