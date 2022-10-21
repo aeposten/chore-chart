@@ -7,10 +7,11 @@ let totalCounter = document.getElementById("total-count");
 let total = 0;
 let count;
 
+let timer;
 let timerSpan = document.getElementById("time");
 let initialMinutes = 20;
 let totalSeconds = initialMinutes * 60;
-let isPaused = false;
+let paused = true;
 
 function selectComponent(elementId) {
   let component = document.getElementById(elementId);
@@ -38,18 +39,53 @@ function updateTotal() {
   totalCounter.textContent = total;
 }
 
+//Starts Timer
+
+function startTimer() {
+  if (paused) {
+    paused = false;
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+  
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+    timerSpan.textContent = `${minutes}:${seconds}`;
+    timer = setInterval(countdown, 1000);
+  }
+}
+
+//Pauses Timer
+
+function pauseTimer() {
+    paused = true;
+    if (timer) {
+        clearInterval(timer);
+    }
+}
+
+
+//Resets Timer
+
+function resetTimer() {
+    paused = true;
+    clearInterval(timer);
+    initialMinutes = 20;
+    totalSeconds = initialMinutes * 60;
+    timerSpan.textContent = `${initialMinutes}:00`;
+}
+
 function countdown() {
   let minutes = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds % 60;
 
-  seconds = seconds < 10 ? '0' + seconds : seconds;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
   timerSpan.textContent = `${minutes}:${seconds}`;
   totalSeconds--;
 
-  console.log(totalSeconds)
-}
-
-function onTimerStart() {
-  setInterval(countdown, 1000);
+  if (totalSeconds === 0) {
+    paused = true;
+    clearInterval(timer);
+  }
+  console.log(totalSeconds);
 }
