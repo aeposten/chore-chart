@@ -7,6 +7,11 @@ let totalCounter = document.getElementById("total-count");
 let total = 0;
 let count;
 
+let timerSpan = document.getElementById("time");
+let initialMinutes = 20;
+let totalSeconds = initialMinutes * 60;
+let isPaused = false;
+
 function selectComponent(elementId) {
   let component = document.getElementById(elementId);
   return component;
@@ -31,4 +36,20 @@ function updateTotal() {
     parseInt(feedCounter.textContent) +
     parseInt(readCounter.textContent);
   totalCounter.textContent = total;
+}
+
+function countdown() {
+  let minutes = Math.floor(totalSeconds / 60);
+  let seconds = totalSeconds % 60;
+
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  timerSpan.textContent = `${minutes}:${seconds}`;
+  totalSeconds--;
+
+  console.log(totalSeconds)
+}
+
+function onTimerStart() {
+  setInterval(countdown, 1000);
 }
