@@ -5,6 +5,7 @@ let bedCounter = selectComponent("bed-count");
 let feedCounter = selectComponent("feed-count");
 let readCounter = selectComponent("read-count");
 let totalCounter = selectComponent("total-count");
+let getPrize = selectComponent("get-prize")
 let total = 0;
 let count;
 
@@ -33,6 +34,7 @@ function increment(elementId) {
 function reset(elementId) {
   count = 0;
   selectComponent(elementId).textContent = count;
+  getPrize.textContent = ""
 }
 
 //Updates total number of chores completed
@@ -44,6 +46,10 @@ function updateTotal() {
     parseInt(feedCounter.textContent) +
     parseInt(readCounter.textContent);
   totalCounter.textContent = total;
+
+  if (total >= 15) {
+    getPrize.textContent = "See Mama for a Prize."
+  }
 }
 
 // Sets initial time calculations

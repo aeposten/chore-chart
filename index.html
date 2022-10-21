@@ -5,9 +5,12 @@
     <title>Chore Chart</title>
   </head>
   <body>
+    <header>
+        <h1>Helmi's Weekly Chore Chart</h1>
+    </header>
     <div class="chore">
       <p id="potty-chore">
-        No Accidents All Day <span class="count" id="potty-count">0</span
+        <h3 class="chore-heading">No Accidents All Day</h3><span class="count" id="potty-count">0</span
         ><button
           class="add"
           id="add-potty"
@@ -25,7 +28,7 @@
     </div>
     <div class="chore">
       <p id="lunch-chore">
-        Finish Lunch at Daycare <span class="count" id="lunch-count">0</span
+        <h3 class="chore-heading">Finish Lunch at Daycare</h3><span class="count" id="lunch-count">0</span
         ><button
           class="add lunch"
           id="add-lunch"
@@ -43,7 +46,7 @@
     </div>
     <div class="chore">
       <p id="bed-chore">
-        Stay in Bed All Night <span class="count" id="bed-count">0</span
+        <h3 class="chore-heading">Stay in Your Bed All Night</h3><span class="count" id="bed-count">0</span
         ><button
           class="add"
           id="add-bed"
@@ -61,7 +64,7 @@
     </div>
     <div class="chore">
       <p id="potty-chore">
-        Feed Puppy and Kitty<span class="count" id="feed-count">0</span
+        <h3 class="chore-heading">Feed Puppy and Kitty</h3><span class="count" id="feed-count">0</span
         ><button
           class="add"
           id="add-potty"
@@ -75,7 +78,7 @@
     </div>
     <div class="chore">
       <p id="potty-chore">
-        Read for 20 Minutes <span class="count" id="read-count">0</span
+        <h3 class="chore-heading">Read for 20 Minutes</h3><span class="count" id="read-count">0</span
         ><button
           class="add"
           id="add-read"
@@ -88,10 +91,19 @@
       </p>
     </div>
     <div id="chore-timer">
-        <p><span id="time">20:00</span><button id="timer-btn" onClick="startTimer()">Start Timer</button> <button id="timer-btn" onClick="pauseTimer()">Pause Timer</button><button id="timer-btn" onClick="resetTimer()">Reset Timer</button></p>
+      <p>
+        <span id="time">20:00</span
+        ><button id="timer-btn" onClick="startTimer()">Start Timer</button>
+        <button id="timer-btn" onClick="pauseTimer()">Pause Timer</button
+        ><button id="timer-btn" onClick="resetTimer()">Reset Timer</button>
+      </p>
     </div>
     <div id="totals">
       <p>Total tasks completed: <span id="total-count">0</span></p>
+    </div>
+    <div id="prizes">
+        <h2>Complete 15 Tasks Per Week to Get A Prize!</h3>
+        <h3 id="get-prize"></h3>
     </div>
   </body>
   <script src="index.js"></script>
