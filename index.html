@@ -6,9 +6,9 @@
   </head>
   <body>
     <header>
-        <h1>Helmi's Weekly Chore Chart</h1>
+        <h1 id="chore-heading">Helmi's Weekly Chore Chart</h1>
     </header>
-    <div class="chore">
+    <img src="images/helmi.jpeg" alt="Helmi looking at the camera smiling wearing red glasses and a dress with peacocks on it" id="helmi-pic"/>
       <p id="potty-chore">
         <h3 class="chore-heading">No Accidents All Day</h3><span class="count" id="potty-count">0</span
         ><button
@@ -16,7 +16,7 @@
           id="add-potty"
           onClick="increment('potty-count'); updateTotal()"
         >
-          +</button
+          Finish Chore</button
         ><button
           class="reset"
           id="reset-potty"
@@ -34,7 +34,7 @@
           id="add-lunch"
           onClick="increment('lunch-count'); updateTotal()"
         >
-          +</button
+        Finish Chore</button
         ><button
           class="reset"
           id="reset-lunch"
@@ -52,7 +52,7 @@
           id="add-bed"
           onClick="increment('bed-count'); updateTotal()"
         >
-          +</button
+        Finish Chore</button
         ><button
           class="reset"
           id="reset-bed"
@@ -70,7 +70,7 @@
           id="add-potty"
           onClick="increment('feed-count'); updateTotal()"
         >
-          +</button
+        Finish Chore</button
         ><button class="reset" onClick="reset('feed-count'); updateTotal()">
           Reset
         </button>
@@ -84,13 +84,14 @@
           id="add-read"
           onClick="increment('read-count'); updateTotal()"
         >
-          +</button
+        Finish Chore</button
         ><button class="reset" onClick="reset('read-count'); updateTotal()">
           Reset
         </button>
       </p>
     </div>
     <div id="chore-timer">
+    <h3>Chore Timer</h3>
       <p>
         <span id="time">20:00</span
         ><button id="timer-btn" onClick="startTimer()">Start Timer</button>

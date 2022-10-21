@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
+
+/*
+Light Grey: #EBEBF2
+Blue: #4162A6
+Green: #66D9AF
+Brown: #A69576
+Peach: #F2C0A2
+*/
+
+
+
+body {
+    background-color: #EBEBF2;
+    color: #4162A6;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+
+
+#chore-heading {
+    font-family: 'Pacifico', cursive;
+}
+
+#helmi-pic {
+    height: 300px;
+    width:300px;
+    border-radius: 50%;
+    border: 6px solid #4162A6;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    padding: 0px;
+    margin: 10px;
+    text-align: center;
+    background-color: #4162A6;
+    color: #EBEBF2;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+}
