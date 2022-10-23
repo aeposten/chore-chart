@@ -18,7 +18,6 @@ body {
     font-size: 20px;
 }
 
-/* Utility Classes to format the rows and columns as desired  */
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -35,6 +34,7 @@ body {
 #chore-heading {
     margin: 0;
     font-family: 'Pacifico', cursive;
+    text-align: center;
 }
 
 #img-container {
@@ -43,10 +43,17 @@ body {
 }
 
 #helmi-pic {
-    height: 300px;
-    width:300px;
-    border-radius: 50%;
+    height: 350px;
+    width: 600px;
+    border-radius: 8%;
     border: 6px solid #4162A6;
+    object-fit: cover;
+}
+
+#img-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -77,4 +84,5 @@ button {
     justify-content: center;
     flex-direction: column ;
     width: 100%;
+    height: 80%;
 }

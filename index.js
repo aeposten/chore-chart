@@ -5,7 +5,7 @@ let bedCounter = selectComponent("bed-count");
 let feedCounter = selectComponent("feed-count");
 let readCounter = selectComponent("read-count");
 let totalCounter = selectComponent("total-count");
-let getPrize = selectComponent("get-prize")
+let getPrize = selectComponent("get-prize");
 let total = 0;
 let count;
 
@@ -15,7 +15,6 @@ let timerSpan = selectComponent("time");
 let initialMinutes = 20;
 let totalSeconds = initialMinutes * 60;
 let paused = true;
-
 
 //Gets component by id
 function selectComponent(elementId) {
@@ -34,7 +33,7 @@ function increment(elementId) {
 function reset(elementId) {
   count = 0;
   selectComponent(elementId).textContent = count;
-  getPrize.textContent = ""
+  getPrize.textContent = "";
 }
 
 //Updates total number of chores completed
@@ -48,7 +47,7 @@ function updateTotal() {
   totalCounter.textContent = total;
 
   if (total >= 15) {
-    getPrize.textContent = "See Mama for a Prize"
+    getPrize.textContent = "See Mama for a Prize";
   }
 }
 
@@ -57,11 +56,10 @@ function setTimeCalculations() {
   let minutes = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds % 60;
 
-  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-  timerSpan.textContent = `${minutes}:${seconds}`;
+  timerSpan.textContent = `${minutes}:${(seconds =
+    seconds < 10 ? "0" + seconds : seconds)}`;
 }
-
 
 //Starts Timer
 function startTimer() {
@@ -87,7 +85,6 @@ function resetTimer() {
   totalSeconds = initialMinutes * 60;
   timerSpan.textContent = `${initialMinutes}:00`;
 }
-
 
 //Starts Countdown
 function countdown() {
