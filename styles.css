@@ -10,15 +10,27 @@ Peach: #F2C0A2
 */
 
 /* styling for the body elements */
+body,
+#img-container,
+#chore-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-row,
+#img-container {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: #ebebf2;
   color: #4162a6;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   height: 100vh;
   margin: 0;
 }
@@ -32,23 +44,15 @@ body {
 }
 
 .flex-row {
-  display: flex;
-  justify-content: center;
   border: 6px solid #4162a6;
   border-radius: 12px;
   max-width: 90%;
-
 }
 
 #chore-heading {
   margin: 0;
   font-family: "Pacifico", cursive;
   text-align: center;
-}
-
-#img-container {
-  display: flex;
-  justify-content: center;
 }
 
 #helmi-pic {
@@ -59,16 +63,9 @@ body {
   object-fit: cover;
 }
 
-#img-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 button {
   width: 100px;
-  height: 30px;
-  padding: 0px;
+  height: 30px; 
   margin: 10px;
   text-align: center;
   background-color: #4162a6;
@@ -80,18 +77,10 @@ button {
 }
 
 #chore-timer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
 }
 
 #prizes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   width: 100%;
   height: 80%;
 }
