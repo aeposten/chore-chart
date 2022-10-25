@@ -54,18 +54,17 @@ function updateTotal() {
 // Sets initial time calculations
 function setTimeCalculations() {
   let minutes = Math.floor(totalSeconds / 60);
-  let seconds = totalSeconds % 60;
+  let seconds = (totalSeconds % 60) - 1;
 
-
+  console.log(minutes),   console.log(totalSeconds);
   timerSpan.textContent = `${minutes}:${(seconds =
-    seconds < 10 ? "0" + seconds : seconds)}`;
+    seconds < 10 ? "0" + seconds: seconds)}`;
 }
 
 //Starts Timer
 function startTimer() {
   if (paused) {
     paused = false;
-    setTimeCalculations();
     timer = setInterval(countdown, 1000);
   }
 }
@@ -90,10 +89,9 @@ function resetTimer() {
 function countdown() {
   setTimeCalculations();
   totalSeconds--;
-
+  
   if (totalSeconds === 0) {
     paused = true;
     clearInterval(timer);
   }
-  console.log(totalSeconds);
 }
