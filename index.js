@@ -54,11 +54,10 @@ function updateTotal() {
 // Sets initial time calculations
 function setTimeCalculations() {
   let minutes = Math.floor(totalSeconds / 60);
-  let seconds = (totalSeconds % 60);
+  let seconds = totalSeconds % 60;
 
-  console.log(minutes),   console.log(totalSeconds);
   timerSpan.textContent = `${minutes}:${(seconds =
-    seconds < 10 ? "0" + seconds: seconds)}`;
+    seconds < 10 ? "0" + seconds : seconds)}`;
 }
 
 //Starts Timer
@@ -87,9 +86,9 @@ function resetTimer() {
 
 //Starts Countdown
 function countdown() {
-  setTimeCalculations();
   totalSeconds--;
-  
+  setTimeCalculations();
+
   if (totalSeconds === 0) {
     paused = true;
     clearInterval(timer);
