@@ -54,7 +54,7 @@ function updateTotal() {
 // Sets initial time calculations
 function setTimeCalculations() {
   let minutes = Math.floor(totalSeconds / 60);
-  let seconds = (totalSeconds % 60) - 1;
+  let seconds = (totalSeconds % 60);
 
   console.log(minutes),   console.log(totalSeconds);
   timerSpan.textContent = `${minutes}:${(seconds =
