@@ -1,15 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap");
 
-/*
-Color Scheme - Some colors aren't used at this point, but I plan to update styling at a later date
-Light Grey: #EBEBF2
-Blue: #4162A6
-Green: #66D9AF
-Brown: #A69576
-Peach: #F2C0A2
-*/
+/* CSS Variables for Color Scheme */
+:root {
+  --grey: #ebebf2;
+  --blue: #4162a6;
+}
 
+/* General Formatting for Body of Page */
+body {
+  background-color: var(--grey);
+  color: var(--blue);
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  margin: 0;
+}
 
+/* Formatting for entire "chart" element */
+#chart {
+  border: 6px solid var(--blue);
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+/* Formatting for columns of chart */
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  max-height: 90%;
+}
+
+/* Formatting for the title */
+#chart-title {
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+}
+
+/* Formatting for the image */
+#helmi-pic {
+  height: 350px;
+  width: 600px;
+  border-radius: 8%;
+  border: 6px solid var(--blue);
+  object-fit: cover;
+}
+
+/* Formatting for the buttons */
+button {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  text-align: center;
+  background-color: var(--blue);
+  color: var(--grey);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  transition-duration: 200ms;
+}
+
+button:hover, button:focus {
+  transform: scale(1.1);
+}
+
+/* Formatting for the prize and timer divs */
+#prizes {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+}
+
+#chore-timer {
+  padding: 10px;
+}
+
+/* Grouping frequently used properties */
 body,
 #img-container,
 #chore-timer {
@@ -19,68 +88,8 @@ body,
   align-items: center;
 }
 
-.flex-row,
+#chart,
 #img-container {
   display: flex;
   justify-content: center;
-}
-
-body {
-  background-color: #ebebf2;
-  color: #4162a6;
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  height: 100vh;
-  margin: 0;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 20px;
-  max-height: 90%;
-}
-
-.flex-row {
-  border: 6px solid #4162a6;
-  border-radius: 12px;
-  max-width: 90%;
-}
-
-#chore-heading {
-  margin: 0;
-  font-family: "Pacifico", cursive;
-  text-align: center;
-}
-
-#helmi-pic {
-  height: 350px;
-  width: 600px;
-  border-radius: 8%;
-  border: 6px solid #4162a6;
-  object-fit: cover;
-}
-
-button {
-  width: 100px;
-  height: 30px; 
-  margin: 10px;
-  text-align: center;
-  background-color: #4162a6;
-  color: #ebebf2;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-}
-
-#chore-timer {
-  padding: 10px;
-}
-
-#prizes {
-  width: 100%;
-  height: 80%;
-  text-align: center;
 }
