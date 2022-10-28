@@ -1,20 +1,20 @@
 //Global variables for chore chart
-let pottyCounter = selectComponent("potty-count");
-let lunchCounter = selectComponent("lunch-count");
-let bedCounter = selectComponent("bed-count");
-let feedCounter = selectComponent("feed-count");
-let readCounter = selectComponent("read-count");
-let totalCounter = selectComponent("total-count");
-let getPrize = selectComponent("get-prize");
+const pottyCounter = selectComponent("potty-count");
+const lunchCounter = selectComponent("lunch-count");
+const bedCounter = selectComponent("bed-count");
+const feedCounter = selectComponent("feed-count");
+const readCounter = selectComponent("read-count");
+const totalCounter = selectComponent("total-count");
+const getPrize = selectComponent("get-prize");
 let total = 0;
 let count;
 
 //Global variables for timer
-let timer;
-let timerSpan = selectComponent("time");
+const timerSpan = selectComponent("time");
 let initialMinutes = 20;
 let totalSeconds = initialMinutes * 60;
 let paused = true;
+let timer;
 
 //Gets component by id
 function selectComponent(elementId) {
