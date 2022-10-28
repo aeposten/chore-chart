@@ -27,10 +27,12 @@ function increment(elementId) {
   count = parseInt(selectComponent(elementId).textContent);
   count += 1;
   selectComponent(elementId).textContent = count;
+  localStorage.setItem("count", JSON.stringify(count));
 }
 
 //Resets individual chore counter
 function reset(elementId) {
+  localStorage.clear();
   count = 0;
   selectComponent(elementId).textContent = count;
   getPrize.textContent = "";
@@ -45,6 +47,8 @@ function updateTotal() {
     parseInt(feedCounter.textContent) +
     parseInt(readCounter.textContent);
   totalCounter.textContent = total;
+
+  localStorage.setItem("total", JSON.stringify(total));
 
   if (total >= 15) {
     getPrize.textContent = "See Mama for a Prize";
