@@ -61,6 +61,7 @@ button {
   border: none;
   border-radius: 15px;
   transition-duration: 200ms;
+  cursor: pointer;
 }
 
 button:hover, button:focus {
